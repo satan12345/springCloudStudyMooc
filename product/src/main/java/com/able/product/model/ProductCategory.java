@@ -2,9 +2,7 @@ package com.able.product.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -13,19 +11,23 @@ import java.util.Date;
  */
 @Data
 @Entity
+@Table(name = "product_category")
 public class ProductCategory {
 
-    @Id
-    @GeneratedValue
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "category_id")
     private Integer categoryId;
 
     /** 类目名字. */
+    @Column(name = "category_name")
     private String categoryName;
 
     /** 类目编号. */
+    @Column(name = "category_type")
     private Integer categoryType;
-
+    @Column(name = "create_time")
     private Date createTime;
-
+    @Column(name = "update_time")
     private Date updateTime;
 }

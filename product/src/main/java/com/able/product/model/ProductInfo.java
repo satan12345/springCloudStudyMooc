@@ -16,7 +16,7 @@ import java.util.Date;
 public class ProductInfo {
 
     @javax.persistence.Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private String productId;
 
