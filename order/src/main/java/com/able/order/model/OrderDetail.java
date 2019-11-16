@@ -2,10 +2,7 @@ package com.able.order.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -17,32 +14,47 @@ import java.util.Date;
 @Entity
 @Table(name = "order_detail")
 public class OrderDetail {
-
     @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     @Column(name = "detail_id")
     private String detailId;
 
-    /** 订单id. */
+    /**
+     * 订单id.
+     */
     @Column(name = "order_id")
     private String orderId;
 
-    /** 商品id. */
+    /**
+     * 商品id.
+     */
     @Column(name = "product_id")
     private String productId;
 
-    /** 商品名称. */
+    /**
+     * 商品名称.
+     */
     @Column(name = "product_name")
     private String productName;
 
-    /** 商品单价. */
+    /**
+     * 商品单价.
+     */
     @Column(name = "product_price")
     private BigDecimal productPrice;
 
-    /** 商品数量. */
+    /**
+     * 商品数量.
+     */
     @Column(name = "product_quantity")
     private Integer productQuantity;
 
-    /** 商品小图. */
+    /**
+     * 商品小图.
+     */
     @Column(name = "product_icon")
     private String productIcon;
     @Column(name = "create_time")

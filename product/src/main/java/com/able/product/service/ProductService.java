@@ -1,5 +1,7 @@
 package com.able.product.service;
 
+import com.able.product.common.DecreaseStockInput;
+import com.able.product.common.ProductInfoOutput;
 import com.able.product.model.ProductInfo;
 
 import java.util.List;
@@ -20,11 +22,11 @@ public interface ProductService {
      * @param productIdList
      * @return
      */
-//    List<ProductInfoOutput> findList(List<String> productIdList);
+    List<ProductInfoOutput> findList(List<String> productIdList);
 
     /**
      * 扣库存
      * @param decreaseStockInputList
      */
-//    void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
+    void decreaseStock(List<DecreaseStockInput> decreaseStockInputList);
 }

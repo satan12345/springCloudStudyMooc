@@ -1,10 +1,14 @@
 package com.able.product;
 
+import com.able.product.common.DecreaseStockInput;
+import com.able.product.common.ProductInfoOutput;
 import com.able.product.mapper.ProductInfoMapper;
 import com.able.product.model.ProductCategory;
 import com.able.product.model.ProductInfo;
 import com.able.product.repository.ProductCategoryRepository;
 import com.able.product.repository.ProductInfoRepository;
+import com.able.product.service.ProductService;
+import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +31,9 @@ public class ProductApplicationTests {
     ProductInfoRepository productInfoRepository;
     @Resource
     ProductCategoryRepository productCategoryRepository;
+
+    @Resource
+    ProductService productService;
     @Test
     public void contextLoads() {
         ProductInfo productInfo=new ProductInfo();
@@ -46,5 +53,15 @@ public class ProductApplicationTests {
         List<ProductCategory> productCategoriesByCategoryTypeIn = productCategoryRepository.findProductCategoriesByCategoryTypeIn(Arrays.asList(11, 12));
         log.info("productCategoriesByCategoryTypeIn={}",productCategoriesByCategoryTypeIn);
     }
+
+    @Test
+    public void test3(){
+        List<ProductInfoOutput> list = productService.findList(Arrays.asList("157875196366160022", "164103465734242707"));
+        System.out.println("list = " + list);
+    }
+
+
+
+
 
 }

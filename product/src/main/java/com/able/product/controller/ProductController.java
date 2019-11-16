@@ -4,6 +4,8 @@ package com.able.product.controller;
 import com.able.product.VO.ProductInfoVO;
 import com.able.product.VO.ProductVO;
 import com.able.product.VO.ResultVO;
+import com.able.product.common.DecreaseStockInput;
+import com.able.product.common.ProductInfoOutput;
 import com.able.product.model.ProductCategory;
 import com.able.product.model.ProductInfo;
 import com.able.product.service.CategoryService;
@@ -79,18 +81,18 @@ public class ProductController {
      * @param productIdList
      * @return
      */
-//    @PostMapping("/listForOrder")
-//    public List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList) {
+    @PostMapping("/listForOrder")
+    public List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIdList) {
 //        try {
 //            Thread.sleep(2000);
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-//        return productService.findList(productIdList);
-//    }
-//
-//    @PostMapping("/decreaseStock")
-//    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList) {
-//        productService.decreaseStock(decreaseStockInputList);
-//    }
+        return productService.findList(productIdList);
+    }
+
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList) {
+        productService.decreaseStock(decreaseStockInputList);
+    }
 }

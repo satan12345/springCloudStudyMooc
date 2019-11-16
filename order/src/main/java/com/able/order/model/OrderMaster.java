@@ -2,10 +2,7 @@ package com.able.order.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -18,8 +15,13 @@ import java.util.Date;
 @Table(name = "order_master")
 public class OrderMaster {
 
-    /** 订单id. */
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    /** 订单id. */
+
     @Column(name = "order_id")
     private String orderId;
 
