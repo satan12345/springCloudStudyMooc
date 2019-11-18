@@ -1,0 +1,22 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+spring:
+  application:
+    name: config
+
+  #git配置
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/satan12345/config-repo.git
+          username: 935846371@qq.com
+          password: Duoluo123
+          basedir: C:\Users\Administrator.SKY-20180726BRD\Desktop\git-config resp\basedir
+
+server:
+  port: 8083
+
+
