@@ -1,7 +1,7 @@
 package com.able.product.utils;
 
 
-import com.able.product.VO.ResultVO;
+import com.able.product.vo.ResultVO;
 
 /**
  * Created by 廖师兄

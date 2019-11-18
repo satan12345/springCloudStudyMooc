@@ -1,9 +1,9 @@
 package com.able.product.controller;
 
 
-import com.able.product.VO.ProductInfoVO;
-import com.able.product.VO.ProductVO;
-import com.able.product.VO.ResultVO;
+import com.able.product.vo.ProductInfoVO;
+import com.able.product.vo.ProductVO;
+import com.able.product.vo.ResultVO;
 import com.able.product.common.DecreaseStockInput;
 import com.able.product.common.ProductInfoOutput;
 import com.able.product.model.ProductCategory;

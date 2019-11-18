@@ -1,8 +1,8 @@
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**
-!**/src/test/**
+!product-server/src/main/**
+!product-server/src/test/**
 
 ### STS ###
 .apt_generated
@@ -33,10 +33,18 @@ build/
 ### Example user template
 
 # IntelliJ project files
-.idea
-*.iml
+
 out
 gen
 /mvnw
 /mvnw.cmd
 /.mvn/
+/product-common/mvnw
+/product-common/mvnw.cmd
+/product-client/.mvn/
+/product-client/mvnw
+/product-client/mvnw.cmd
+/product-server/mvnw
+/product-server/mvnw.cmd
+/product-server/.mvn/
+/product-common/.mvn/

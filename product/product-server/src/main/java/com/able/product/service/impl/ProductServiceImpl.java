@@ -8,7 +8,6 @@ import com.able.product.exception.ProductException;
 import com.able.product.model.ProductInfo;
 import com.able.product.repository.ProductInfoRepository;
 import com.able.product.service.ProductService;
-import com.able.product.utils.JsonUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
