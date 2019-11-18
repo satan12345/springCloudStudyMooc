@@ -29,15 +29,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/mvnw
-/mvnw.cmd
-/.mvn/
-/order-client/.mvn/
-/order-client/mvnw
-/order-client/mvnw.cmd
-/order-common/.mvn/
-/order-common/mvnw
-/order-common/mvnw.cmd
-/order-server/.mvn/
-/order-server/HELP.md
-/order-server/mvnw.cmd

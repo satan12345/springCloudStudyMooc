@@ -1,8 +1,6 @@
 package com.able.order.service.impl;
 
-import com.able.order.client.ProductClient;
-import com.able.order.common.DecreaseStockInput;
-import com.able.order.common.ProductInfoOutput;
+
 import com.able.order.dto.OrderDTO;
 import com.able.order.enums.OrderStatusEnum;
 import com.able.order.enums.PayStatusEnum;
@@ -12,6 +10,9 @@ import com.able.order.model.OrderDetail;
 import com.able.order.model.OrderMaster;
 import com.able.order.service.OrderService;
 import com.able.order.utils.KeyUtil;
+import com.able.product.client.ProductClient;
+import com.able.product.common.DecreaseStockInput;
+import com.able.product.common.ProductInfoOutput;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

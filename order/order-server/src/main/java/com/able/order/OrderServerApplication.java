@@ -8,12 +8,13 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients(basePackages ={"com.able.product.client"})
 @MapperScan(basePackages = {"com.able.order.mapper"})
-public class OrderApplication {
+
+public class OrderServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(OrderServerApplication.class, args);
     }
 
 }

@@ -14,7 +14,7 @@ spring:
       connection-timeout: 30000
       connection-test-query: SELECT 1
   application:
-    name: order
+    name: order-server
 
 eureka:
   client:
