@@ -8,6 +8,8 @@ import com.able.product.exception.ProductException;
 import com.able.product.model.ProductInfo;
 import com.able.product.repository.ProductInfoRepository;
 import com.able.product.service.ProductService;
+import com.able.product.utils.JsonUtil;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,10 +29,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductInfoRepository productInfoRepository;
-//
-//    @Autowired
-//    private AmqpTemplate amqpTemplate;
-//
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+
     @Override
     public List<ProductInfo> findUpAll() {
         return productInfoRepository.findProductInfoByProductStatus(ProductStatusEnum.UP.getCode());
@@ -57,7 +59,7 @@ public class ProductServiceImpl implements ProductService {
             BeanUtils.copyProperties(e, output);
             return output;
         }).collect(Collectors.toList());
-        //amqpTemplate.convertAndSend("productInfo", JsonUtil.toJson(productInfoOutputList));
+        amqpTemplate.convertAndSend("productInfo", JsonUtil.toJson(productInfoOutputList));
 
     }
 

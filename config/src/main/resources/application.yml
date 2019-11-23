@@ -14,9 +14,23 @@ spring:
           uri: https://github.com/satan12345/config-repo.git
           username: 935846371@qq.com
           password: Duoluo123
-          basedir: C:\Users\Administrator.SKY-20180726BRD\Desktop\git-config resp\basedir
+          basedir: C:\Users\Administrator.SKY-20180726BRD\Desktop\local-git
+  rabbitmq:
+    host: 192.168.9.252
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+
+
 
 server:
   port: 8083
 
 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"

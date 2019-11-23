@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: orderServer
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: default
+    stream:
+      binders:
+        myTestOutMessage:
+          group: order

@@ -1,25 +1,26 @@
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: ablejava
-    url: jdbc:mysql://192.168.9.223:3306/SpringCloud_Sell?characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
-    hikari:
-      pool-name: 订单表连接池
-      hikari.minimum-idle: 5
-      maximum-pool-size: 15
-      auto-commit: true
-      idle-timeout: 30000
-      max-lifetime: 1800000
-      connection-timeout: 30000
-      connection-test-query: SELECT 1
-  application:
-    name: order-server
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: ablejava
+#    url: jdbc:mysql://192.168.9.223:3306/SpringCloud_Sell?characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+#    hikari:
+#      pool-name: 订单表连接池
+#      hikari.minimum-idle: 5
+#      maximum-pool-size: 15
+#      auto-commit: true
+#      idle-timeout: 30000
+#      max-lifetime: 1800000
+#      connection-timeout: 30000
+#      connection-test-query: SELECT 1
+#  application:
+#    name: order-server
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#
+#server:
+#  port: 8082
+#
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
-server:
-  port: 8082
