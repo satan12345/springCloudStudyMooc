@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: api-getway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8084
+
+##指定路由规则
+#zuul:
+#  routes:
+#    ##路由地址的配置
+#    myProduct:
+#        path: /myProduct/**
+#        serviceId: product
+#    #简洁写法
+#    #product: myproduct/**
+#
+#  #忽略
+#  ignored-patterns:
+#    -/myProduct/product/listForOrder
+#    -/**/product/listForOrder
+#  # 敏感头
+#  sensitive-headers:
+
+
